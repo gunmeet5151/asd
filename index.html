@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multi-Test Tool</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab(0)">ASD Test</button>
+    <button class="tab-btn" onclick="switchTab(1)">Color Test (Plates)</button>
+    <button class="tab-btn" onclick="switchTab(2)">Color Test (Box)</button>
+  </div>
+
+  <!-- ASD Test -->
+  <div class="tab-content active">
+    <div class="container">
+      <h2>Autism Spectrum Disorder (ASD) Parent Assessment Test</h2>
+      <div id="asd-question-container"></div>
+      <button id="prevBtn" onclick="prevQuestion()" style="display:none;">Previous</button>
+      <button id="submitBtn" onclick="calculateScore()" style="display:none;">Submit</button>
+      <div class="result" id="result"></div>
+      <div id="average-time"></div>
+      <button id="retryBtn" onclick="retryTest()" style="display:none; background:#dc3545; color:white;">Retry</button>
+    </div>
+  </div>
+
+  <!-- Color Plate Test -->
+  <div class="tab-content">
+    <div class="container">
+      <h1>Color Blindness Test (Plates)</h1>
+      <canvas id="canvas" width="400" height="400" style="width:100%;max-width:400px;border-radius:12px;margin-bottom:20px;"></canvas>
+      <input type="text" id="userAnswer" placeholder="Enter the number you see" style="padding:10px;width:80%;font-size:16px;">
+      <div class="note">If there is no number, write <strong>NA</strong>.</div>
+      <button onclick="nextPlate()">Submit</button>
+      <p id="feedback"></p>
+      <div id="average-time-plate"></div>
+    </div>
+  </div>
+
+  <!-- Color Box Test -->
+  <div class="tab-content">
+    <div class="container">
+      <h1>Color Blindness Test (Box)</h1>
+      <div id="colorBox" style="width:150px;height:150px;margin:1rem auto;border:2px solid #333;border-radius:8px;"></div>
+      <div class="options" id="optionsContainer" style="display:flex;justify-content:center;flex-wrap:wrap;gap:1rem;margin-top:1rem;"></div>
+      <div id="resultBox"></div>
+      <div id="score">Score: 0 / 10</div>
+      <div id="average-time-box"></div>
+      <button id="restartBtn" onclick="restartTest()" style="display:none;">Restart</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

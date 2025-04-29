@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #eef1f5;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  background: #333;
+  padding: 10px;
+}
+
+.tabs button {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 6px;
+}
+
+.tabs button.active {
+  background: #007bff;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h1 {
+  text-align: center;
+}
+
+.option-btn {
+  display: block;
+  padding: 12px;
+  background: #f1f1f1;
+  color: black;
+  margin: 8px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+}
+
+.option-btn:hover {
+  background: #dcdcdc;
+}
+
+.result {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-left: 6px solid #007bff;
+  border-radius: 5px;
+  display: none;
+}
+
+.note {
+  font-size: 14px;
+  color: #777;
+}
+
+#score {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+#average-time {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #555;
+}
